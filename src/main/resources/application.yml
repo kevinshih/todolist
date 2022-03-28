@@ -1,0 +1,21 @@
+spring: 
+  datasource:
+     url: jdbc:mysql://localhost:3306/todolist?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Taipei
+     username:  root
+     password: 
+     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy:  org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+        hibernate.hbm2ddl.auto: update  
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+    
+server: 
+  port: 9003
+  servlet.context-path: /todolist
+  
