@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ItemRepository extends JpaRepository<todolist.model.Item, Integer> {
 	public List<todolist.model.Item> findByListidOrderBySortid(int listid);
-	
+	public List<todolist.model.Item> findByListidInOrderByListidAscSortidAsc(List<Integer> listids);
 }
