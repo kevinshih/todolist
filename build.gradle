@@ -46,6 +46,20 @@ dependencies {
 	compile group: 'org.javassist', name: 'javassist', version: '3.26.0-GA'
     
     compile 'org.apache.httpcomponents:httpclient:4.5.9'
+	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+	implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.3.4'
+	
+	//下面這三個是為了swagger而灌的
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-data-rest', version: '2.9.2'
 
+	// lombok，编译有效，打包无效
+	compileOnly 'org.projectlombok:lombok'
+	// gradle 5.0以上版本注解处理不再compile classpath，需要增加 annotation processor path
+	annotationProcessor 'org.projectlombok:lombok'
+	
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

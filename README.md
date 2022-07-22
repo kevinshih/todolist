@@ -15,7 +15,7 @@ D:\git\todolist>java -jar build/libs/todolist.war
 
 Introduce API:
 **List** contains muliple **Item**. Item can only belong to one List.
-Time complexity : O(N)
+Time complexity : O(N^2)
 	user can be show all his lists content and list name is order by list’s duedate, and each list’s item is sort by sortid.
 Get: http://localhost:9003/todolist/api/getMyAllListAndItemByUserid/?userid=0
 
@@ -46,3 +46,11 @@ Time complexity : O(N)
 Get http://localhost:9003/todolist/api/updateListDuedate
 Originally, projectA’s duedate is 3/31.
 After adjustment the projectA’s duedate.
+
+
+---
+
+新增swagger功能:
+application.properties要設定
+build.gradle要設定
+swaggerConfig新增
